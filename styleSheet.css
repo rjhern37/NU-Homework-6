@@ -1,0 +1,27 @@
+.title {
+    background-color: rgb(65, 70, 82);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 38px;
+    font-family: 'Bellota', cursive;
+}
+
+.container {
+    justify-content: right;
+    padding:  0 auto;
+    background-color: maroon;
+}
+
+.footer {
+    padding: 50px 50px;
+    text-align: center;
+}
+
+
+.daysRow li{
+    display: inline;
+    grid-template-rows: auto auto auto auto auto;
+    padding: 10px 10px;
+
+}
