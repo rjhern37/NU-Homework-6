@@ -19,9 +19,20 @@
 }
 
 
-.daysRow li{
+/* .daysRow li{
     display: inline;
     grid-template-rows: auto auto auto auto auto;
     padding: 10px 10px;
+    
+    
+} */
 
+.block {
+    display: inline-block;
+    height: 120px;
+    width: 150px;
+    padding: 5px;
+    border-style: solid;
+    border-color: maroon;
+    border-radius: 10px;
 }
