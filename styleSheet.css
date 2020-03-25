@@ -28,7 +28,7 @@
 } */
 
 .block {
-    display: inline-block;
+    flex-direction: row;
     height: 120px;
     width: 150px;
     padding: 5px;

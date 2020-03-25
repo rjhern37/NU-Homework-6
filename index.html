@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="styleSheet.css">
     <link href="https://fonts.googleapis.com/css?family=Bellota&display=swap" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script type = "text/JavaScript" src = "moment.js"></script>
+  
+
 </head>
 
 <body>
@@ -40,8 +43,8 @@
                                 </button>
                             </p>
                         </div>
-                        <p>This is where the search history goes...</p>
-
+                        <p>Recently Searched:</p>
+                        <ul class="history-list"></ul>
 
                     </div>
                 </div>
@@ -51,10 +54,10 @@
         <div class="tile is-parent">
             <div class="tile is-child box">
                 <p class="subtitle current"><strong>This is where the current city goes</strong></p>
-               <p>Temp:</p>
-               <p>Humidity:</p>
-               <p>Wind Speed:</p>
-               <p>UV Index:</p>
+               <p >Temp:<span id="tempC"></span> </p>
+               <p >Humidity:<span id="humidC"></span> </p>
+               <p >Wind Speed: <span id="windC"></span> </p>
+               <p >UV Index: <span id="UVindexC"></span></p>
 
             </div>
 
