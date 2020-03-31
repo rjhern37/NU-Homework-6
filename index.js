@@ -3,9 +3,9 @@
 $(document).ready(function () {
 
     function makeList(text) {
-        console.log("Hello World")
+        // console.log("Hello World")
         var li = $("<li>").addClass("list-item").text(text)
-        console.log(li)
+        // console.log(li)
         $(".history-list").append(li)
 
     }
@@ -16,10 +16,6 @@ $(document).ready(function () {
         var weatherBlocks = ``
 
         for (var i = 0; i < opData.list.length; i += 8) {
-            console.log(opData.list[i]);
-            console.log(opData.list[i].weather[0].description);
-            console.log("------------------------------------");
-
             weatherBlocks += `
             <div class="block">
 
@@ -27,15 +23,10 @@ $(document).ready(function () {
             <div> ${opData.list[i].main.temp} </div>
             <div> ${opData.list[i].weather[0].description} </div>
             <div> ${opData.list[i].main.humidity} </div>
+            </div>
             
             </div>
             `
-
-            // var hum = opData.list[]
-            // var wind = opData.list.wind.speed
-            // var temp = opData.list.main.temp
-
-            // console.log(temp + ", " + wind + ", " + hum)
 
         }
 
@@ -45,13 +36,7 @@ $(document).ready(function () {
 
 
 
-    //Function when user hits the search or enter button to search for the location they specified
-
-
-    // function saveCity () {
-    //     console.log('enteredCity')
-    // }
-
+    //Function when user hits the search to search for the location they specified
 
     $('#search').on('click', function (e) {
 
@@ -63,6 +48,21 @@ $(document).ready(function () {
         currentWeather(city)
         // searchWeather(city)
     })
+
+    //Trying to update the "current city" text with the city entered
+    
+    // document.getElementsByClassName('list-item').onclick = function() {
+    //     myFunction()
+    // }
+
+    // function myFunction (){
+    //     document.getElementsByClassName('current').innerHTML = $('.inputCity').val()
+    // }
+
+    // $(".current").addEventlistner('click', function (newCity){
+
+
+    // })
 
     function searchWeather(city) {
         window.localStorage.setItem("history", JSON.stringify(history))
@@ -80,7 +80,7 @@ $(document).ready(function () {
 
     }
     function renderCurrentWeather(data) {
-        console.log("Hello Ray")
+
         $("#tempC").text(data.main.temp);
         $("#humidC").text(data.main.humidity);
         $("#windC").text(data.wind.speed)
@@ -89,9 +89,9 @@ $(document).ready(function () {
 
     }
 
+    //Get coordinates for the user's location using geolocation
     function getCoordinates() {
         if (navigator.geolocation) {
-            //get coordinates for the user's location using geolocation
             navigator.geolocation.getCurrentPosition(function (position) {
                 lat = position.coords.latitude;
                 lon = position.coords.longitude;
@@ -114,7 +114,7 @@ $(document).ready(function () {
     console.log(getCoordinates())
 
 
-    //Updates the current weather seaction with the city the user has entered in the search bar
+    //Updates the current weather section with the city the user has entered in the search bar
 
     function currentWeather(c) {
         console.log(c)
@@ -136,7 +136,7 @@ $(document).ready(function () {
             renderCurrentWeather(data);
         })
         searchWeather(c);
-        //   .then(updatePage);
+
 
     };
 
@@ -145,8 +145,8 @@ $(document).ready(function () {
 
     var history = JSON.parse(window.localStorage.getItem('history')) || [];
     if (history.length > 0) {
-        console.log("hello world")
-        // searchWeather(history[history.length-1]) 
+        // console.log("hello world")
+
         currentWeather(history[history.length - 1])
     }
     for (let index = 0; index < history.length; index++) {

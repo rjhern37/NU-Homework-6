@@ -7,32 +7,51 @@
     font-family: 'Bellota', cursive;
 }
 
-.container {
-    justify-content: right;
-    padding:  0 auto;
-    background-color: maroon;
-}
-
 .footer {
     padding: 50px 50px;
     text-align: center;
 }
+ 
+.daysRow{
+    display: grid;
+    grid-template-columns: 150px 150px 150px 100px 100px;
+    grid-column-gap: 20px;
+
+} 
 
 
-/* .daysRow li{
-    display: inline;
-    grid-template-rows: auto auto auto auto auto;
-    padding: 10px 10px;
-    
-    
-} */
 
 .block {
-    flex-direction: row;
+    color: white;
+    background-color: cornflowerblue;
+    text-align: center;
     height: 120px;
     width: 150px;
-    padding: 5px;
-    border-style: solid;
-    border-color: maroon;
+    padding: 25px 25px 105px 25px;
+    
+    
     border-radius: 10px;
+    
 }
+
+.history-list {
+    cursor: pointer;
+    color: white;
+
+}
+
+li {
+    color: white;
+    border-style: none;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    
+
+}
+
+li:hover {
+    color: white;
+}
+
+
+
